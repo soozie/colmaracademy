@@ -1,0 +1,57 @@
+
+/* FONT FAMILY: MULI ALL */
+
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Muli ExtraLight'),
+    local('Muli-ExtraLight'),
+    url(https://fonts.gstatic.com/s/muli/v11/wBn3kQts7ayuao6SJDCSAQ.ttf)
+    format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Muli Light'),
+    local('Muli-Light'),
+    url(https://fonts.gstatic.com/s/muli/v11/zR-6QGMCFX5j-6nbH_HpIQ.ttf)
+    format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Muli Regular'),
+    local('Muli-Regular'),
+    url(https://fonts.gstatic.com/s/muli/v11/BfQP1MR3mJNaumtWa4Tizg.ttf)
+    format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Muli SemiBold'),
+    local('Muli-SemiBold'),
+    url(https://fonts.gstatic.com/s/muli/v11/S9LiixunRYGjiYDwREoeUA.ttf)
+    format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Muli Bold'),
+    local('Muli-Bold'),
+    url(https://fonts.gstatic.com/s/muli/v11/zDo7ROEZZCd7eFZ9jdOP8g.ttf)
+    format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Muli ExtraBold'),
+    local('Muli-ExtraBold'),
+    url(https://fonts.gstatic.com/s/muli/v11/qstYUxeOL8hwB50NF7U10g.ttf)
+    format('truetype');
+}

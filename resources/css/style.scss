@@ -1,0 +1,246 @@
+
+/* HEX COLOR PALETTE ORANGE-CLASSY */
+$cl-cream: #FFFBF0;
+$cl-beige: #CCC4B8;
+$cl-bglight: rgba(204, 197, 185, 0.6);
+$cl-tortora: #403D39;
+$cl-dark: #252422;
+$cl-light: #EDE9E1;
+$cl-orange: #EB5E28;
+$cl-wall: #F4F4ED;
+$cl-wallight: rgba(244, 244, 237, 0.6);
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Muli', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  overflow: auto;
+  width: 100%;
+  color: $cl-tortora;
+
+  body {
+    margin: 0;
+    width: 100%;
+
+    .header {
+      align-items: center;
+      background-color: $cl-light;
+      display: flex;
+      flex-direction: row;
+      height: 64px;
+      justify-content: space-between;
+      padding: 0 24px;
+      width: 100%;
+
+      &__logo-title {
+        display: flex;
+        height: 40px;
+        width: auto;
+        align-items: center;
+      }
+
+      &__logo-image {
+        height: 100%;
+        width: auto;
+      }
+
+      &__logo-text {
+        color: $cl-orange;
+        font-size: 24px;
+
+
+        span {
+          color: $cl-tortora;
+          font-weight: bold;
+        }
+      }
+
+      &__nav {
+        align-items: center;
+        display: flex;
+        height: 32px;
+        justify-content: space-between;
+        width: auto;
+
+        a {
+          color: $cl-dark;
+          font-size: 16px;
+          padding: 4px 8px;
+          text-decoration: none;
+          border-right: 1px solid grey;
+
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .default-layout {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        padding: 32px 24px;
+        width: 100%;
+      }
+
+      .left-box {
+        height: auto;
+        padding-right: 24px;
+        width: 60%;
+      }
+
+      .right-box {
+        padding-left: 24px;
+        width: 40%;
+      }
+
+      .banner-section {
+        background-color: $cl-cream;
+
+        &__image {
+
+          img {
+            border-radius: 2px;
+            width: 100%;
+          }
+        }
+
+        &__text {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 100px 24px;
+          text-align: center;
+
+          h1 {
+            font-size: 40px;
+            font-weight: 800;
+          }
+
+          p {
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          a {
+            background-color: $cl-orange;
+            border-radius: 2px;
+            color: $cl-cream;
+            display: flex;
+            font-size: 18px;
+            font-weight: 400;
+            justify-content: center;
+            padding: 16px 80px;
+            text-align: center;
+            text-decoration: none;
+            transition: color, background-color 300ms ease-in-out;
+            width: auto;
+
+            &:hover {
+              background-color: $cl-beige;
+              color: $cl-tortora;
+              font-weight: 400;
+            }
+
+            &:active {
+              transform: scale(.98);
+            }
+          }
+        }
+      }
+
+      .articles-section {
+        background-color: $cl-light;
+
+        &__article {
+
+          img {
+            border-radius: 2px;
+            width: 100%;
+          }
+
+          h2 {
+            font-size: 32px;
+            font-weight: 800;
+            padding-top: 32px;
+            padding-left: 10px;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+            padding: 24px 60px 32px 10px;
+          }
+
+          h6 {
+            font-size: 12px;
+            font-weight: 300;
+            padding-left: 10px;
+          }
+        }
+
+        &__list {
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+        }
+
+        &__miniart {
+          display: flex;
+          flex-direction: row;
+          border: 1px solid $cl-wall;
+          background-color: $cl-cream;
+
+          &:hover {
+            background-color: $cl-light;
+            border: 1px solid $cl-light;
+            transition: all 200ms ease-in-out;
+          }
+
+          img {
+            width: 35%;
+            height: 100%;
+            padding: 16px;
+          }
+        }
+
+        &__text {
+          width: 65%;
+          padding: 32px 16px;
+          display: flex;
+          justify-content: space-around;
+          flex-direction: column;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1;
+          }
+
+          a {
+            font-size: 12px;
+            font-weight: 300;
+            color: $cl-orange;
+          }
+        }
+      }
+    }
+  }
+}
