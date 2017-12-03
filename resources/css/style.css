@@ -11,10 +11,11 @@ html {
   color: #403D39; }
   html body {
     margin: 0;
-    width: 100%; }
+    width: 100%;
+    background-color: #F4F4ED; }
     html body .header {
       align-items: center;
-      background-color: #EDE9E1;
+      background-color: rgba(244, 244, 237, 0.9);
       box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
       display: flex;
       flex-direction: row;
@@ -33,6 +34,12 @@ html {
       html body .header__logo-image {
         height: 100%;
         width: auto; }
+      html body .header__login-image {
+        display: none; }
+      html body .header__campus-image {
+        display: none; }
+      html body .header__online-image {
+        display: none; }
       html body .header__logo-text {
         color: #EB5E28;
         font-size: 24px; }
@@ -42,22 +49,28 @@ html {
       html body .header__nav {
         align-items: center;
         display: flex;
-        height: 32px;
+        height: 64px;
         justify-content: space-between;
         width: auto; }
         html body .header__nav a {
-          color: #252422;
+          color: #403D39;
           font-size: 16px;
+          font-weight: 500;
           padding: 4px 8px;
           text-decoration: none;
-          border-right: 1px solid grey; }
-          html body .header__nav a:last-child {
-            border-right: 0; }
+          transition: all 200ms ease-in-out; }
+          html body .header__nav a:hover {
+            background-color: #EB5E28;
+            color: #F4F4ED;
+            height: 64;
+            padding: 24px 8px; }
     html body .main {
       padding-top: 64px;
       display: flex;
       flex-direction: column;
-      width: 100%; }
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto; }
       html body .main .default-layout {
         display: flex;
         flex-direction: row;
@@ -66,13 +79,14 @@ html {
         width: 100%; }
       html body .main .left-box {
         height: auto;
-        padding-right: 24px;
+        padding: 32px;
         width: 60%; }
       html body .main .right-box {
-        padding-left: 24px;
+        padding: 32px;
         width: 40%; }
       html body .main .banner-section {
-        background-color: #FFFBF0; }
+        background-color: #403D39;
+        color: #FFFBF0; }
         html body .main .banner-section__image img {
           border-radius: 2px;
           width: 100%; }
@@ -81,7 +95,7 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          padding: 100px 24px;
+          padding-right: 50px;
           text-align: center; }
           html body .main .banner-section__text h1 {
             font-size: 40px;
@@ -90,6 +104,7 @@ html {
             font-size: 20px;
             font-weight: 600; }
           html body .main .banner-section__text a {
+            align-items: center;
             background-color: #EB5E28;
             border-radius: 2px;
             box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.1);
@@ -97,12 +112,12 @@ html {
             display: flex;
             font-size: 18px;
             font-weight: 400;
+            height: 15%;
             justify-content: center;
-            padding: 16px 80px;
             text-align: center;
             text-decoration: none;
             transition: color, background-color 300ms ease-in-out;
-            width: auto; }
+            width: 75%; }
             html body .main .banner-section__text a:hover {
               background-color: #CCC4B8;
               color: #403D39;
@@ -117,27 +132,27 @@ html {
         html body .main .articles-section__article h2 {
           font-size: 32px;
           font-weight: 800;
-          padding-top: 32px;
-          padding-left: 10px; }
+          padding-top: 32px; }
         html body .main .articles-section__article p {
           font-size: 16px;
-          font-weight: 400;
+          font-weight: 300;
           line-height: 1;
-          padding: 24px 60px 32px 10px; }
+          padding: 24px 60px 32px 0;
+          text-align: justify; }
         html body .main .articles-section__article h6 {
           font-size: 12px;
-          font-weight: 300;
-          padding-left: 10px; }
+          font-weight: 300; }
         html body .main .articles-section__list {
           display: flex;
           flex-direction: column;
-          justify-content: space-between; }
+          justify-content: space-around; }
         html body .main .articles-section__miniart {
-          background-color: #FFFBF0;
-          border: 1px solid #F4F4ED;
+          background-color: #F4F4ED;
+          border: 1px solid #FFFBF0;
           box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.1);
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
           transition: all 300ms ease-in-out; }
           html body .main .articles-section__miniart:hover {
             background-color: #EDE9E1;
@@ -148,18 +163,20 @@ html {
             padding: 16px;
             width: 35%;
             border-radius: 2px; }
+          html body .main .articles-section__miniart .mobile {
+            display: none; }
         html body .main .articles-section__text {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          padding: 32px 16px;
+          padding: 24px 16px;
           width: 65%; }
           html body .main .articles-section__text h4 {
             font-size: 20px;
             font-weight: 600; }
           html body .main .articles-section__text p {
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 300;
             line-height: 1; }
           html body .main .articles-section__text a {
             color: #EB5E28;
@@ -185,9 +202,13 @@ html {
         html body .main .courses-section__course {
           background-color: #F4F4ED;
           box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.2);
+          height: auto;
           margin: 16px;
-          height: 80%;
-          width: 27%; }
+          transition: all 100ms ease-in-out;
+          width: 23%; }
+          html body .main .courses-section__course:hover {
+            background-color: #EDE9E1;
+            box-shadow: none; }
           html body .main .courses-section__course img {
             border-radius: 2px;
             height: auto;
@@ -196,7 +217,7 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          min-height: 140px;
+          min-height: auto;
           padding: 16px;
           text-align: left; }
           html body .main .courses-section__text h4 {
@@ -212,5 +233,336 @@ html {
             font-weight: 300;
             line-height: 1;
             padding: 4px; }
+      html body .main .thesis-section {
+        background-color: #EDE9E1;
+        flex-direction: column; }
+        html body .main .thesis-section h2 {
+          margin: 0 auto;
+          color: #EB5E28;
+          font-size: 32px;
+          font-weight: 800;
+          padding: 16px 32px; }
+        html body .main .thesis-section__container {
+          display: flex;
+          flex-direction: row; }
+        html body .main .thesis-section__thesis {
+          display: flex;
+          flex-direction: column;
+          padding-right: 32px; }
+          html body .main .thesis-section__thesis video {
+            border-radius: 2px;
+            width: 90%; }
+          html body .main .thesis-section__thesis h4 {
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 24px; }
+          html body .main .thesis-section__thesis p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1;
+            max-width: 600px;
+            padding-top: 8px;
+            text-align: justify;
+            width: 100%; }
+        html body .main .thesis-section__list {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start; }
+        html body .main .thesis-section__miniart {
+          background-color: #F4F4ED;
+          border: 1px solid #FFFBF0;
+          border-radius: 2px;
+          box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, 0.1);
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          transition: all 300ms ease-in-out; }
+          html body .main .thesis-section__miniart:first-child {
+            margin-bottom: 32px; }
+          html body .main .thesis-section__miniart:hover {
+            background-color: #EDE9E1;
+            border: 1px solid #EDE9E1;
+            box-shadow: none; }
+          html body .main .thesis-section__miniart img {
+            height: 100%;
+            padding: 16px;
+            width: 35%;
+            border-radius: 2px; }
+        html body .main .thesis-section__text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 24px 16px;
+          width: 65%;
+          height: auto; }
+          html body .main .thesis-section__text h4 {
+            font-size: 20px;
+            font-weight: 600; }
+          html body .main .thesis-section__text p {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1; }
+          html body .main .thesis-section__text a {
+            color: #EB5E28;
+            font-size: 12px;
+            font-weight: 300; }
+    html body .footer {
+      display: flex;
+      height: 64px;
+      justify-content: space-between;
+      padding: 16px 24px;
+      width: 100%;
+      background-color: #403D39;
+      color: #FFFBF0; }
+      html body .footer h6 {
+        font-size: 12px;
+        font-weight: 300; }
+      html body .footer__link a {
+        color: #EB5E28;
+        font-size: 12px;
+        font-weight: 300; }
+    @media (max-width: 1024px) {
+      html body .main .banner-section__text h1 {
+        font-size: 30px;
+        font-weight: 700; }
+      html body .main .banner-section__text p {
+        font-size: 18px;
+        font-weight: 500; }
+      html body .main .articles-section__miniart {
+        flex-direction: column; }
+        html body .main .articles-section__miniart img {
+          display: none; }
+        html body .main .articles-section__miniart .mobile {
+          display: flex;
+          height: 100%;
+          padding: 8px;
+          width: 100%;
+          border-radius: 2px; }
+      html body .main .articles-section__text {
+        padding: 16px;
+        width: 100%; }
+        html body .main .articles-section__text p {
+          padding: 8px 0; }
+      html body .main .thesis-section__thesis p {
+        max-width: 90%; }
+      html body .main .thesis-section__text {
+        padding: 16px; }
+        html body .main .thesis-section__text p {
+          padding: 8px 0; } }
+    @media (max-width: 768px) {
+      html body .header__logo-text {
+        font-size: 18px; }
+      html body .header__nav a {
+        font-size: 14px; }
+      html body .main .default-layout {
+        padding: 0; }
+      html body .main .banner-section__text h1 {
+        font-size: 24px;
+        font-weight: 600; }
+      html body .main .banner-section__text p {
+        font-size: 16px;
+        font-weight: 400; }
+      html body .main .banner-section__text a {
+        font-size: 14px;
+        font-weight: 300; }
+      html body .main .articles-section {
+        justify-content: center; }
+        html body .main .articles-section__article {
+          display: none; }
+        html body .main .articles-section__list {
+          width: 50%; }
+        html body .main .articles-section__miniart {
+          width: 100%; }
+        html body .main .articles-section__text h4 {
+          font-size: 16px; }
+        html body .main .articles-section__text p {
+          font-size: 12px; }
+        html body .main .articles-section__text a {
+          font-size: 10px; }
+      html body .main .courses-section h2 {
+        font-size: 24px;
+        font-weight: 600; }
+      html body .main .courses-section__text {
+        align-items: center;
+        padding: 8px; }
+        html body .main .courses-section__text h4 {
+          font-size: 14px;
+          font-weight: 500; }
+        html body .main .courses-section__text h5 {
+          display: none; }
+        html body .main .courses-section__text p {
+          display: none; }
+      html body .main .thesis-section h2 {
+        font-size: 24px;
+        font-weight: 600; }
+      html body .main .thesis-section__thesis p {
+        font-size: 12px;
+        font-weight: 300; }
+      html body .main .thesis-section__miniart {
+        margin-bottom: 0; }
+        html body .main .thesis-section__miniart img {
+          display: none; }
+      html body .main .thesis-section__text {
+        width: auto; }
+        html body .main .thesis-section__text h4 {
+          font-size: 16px; }
+        html body .main .thesis-section__text p {
+          font-size: 12px; }
+        html body .main .thesis-section__text a {
+          font-size: 10px; }
+      html body .footer h6 {
+        font-size: 10px;
+        font-weight: 200; }
+      html body .footer__link a {
+        font-size: 10px;
+        font-weight: 200; } }
+    @media (max-width: 590px) {
+      html body .header__logo-text {
+        font-size: 16px; }
+      html body .header__nav a {
+        font-size: 10px; }
+      html body .main .banner-section__text h1 {
+        font-size: 18px; }
+      html body .main .banner-section__text p {
+        font-size: 14px; }
+      html body .main .banner-section__text a {
+        font-size: 12px; }
+      html body .main .articles-section__text h4 {
+        font-size: 14px; }
+      html body .main .articles-section__text p {
+        font-size: 10px; }
+      html body .main .courses-section h2 {
+        font-size: 18px;
+        font-weight: 500; }
+      html body .main .courses-section__text h4 {
+        font-size: 12px;
+        font-weight: 400; }
+      html body .main .thesis-section h2 {
+        font-size: 18px;
+        font-weight: 500; }
+      html body .main .thesis-section__thesis h4 {
+        font-size: 14px;
+        font-weight: 400; }
+      html body .main .thesis-section__thesis p {
+        font-size: 10px;
+        font-weight: 200; }
+      html body .main .thesis-section__miniart {
+        margin-bottom: 0; }
+      html body .main .thesis-section__text h4 {
+        font-size: 14px; }
+      html body .main .thesis-section__text p {
+        font-size: 10px; }
+      html body .footer h6 {
+        font-size: 8px;
+        font-weight: 200; }
+      html body .footer__link a {
+        font-size: 8px;
+        font-weight: 200; } }
+    @media (max-width: 480px) {
+      html body .header__logo-title {
+        justify-content: space-around;
+        width: 100%; }
+      html body .header__logo-image {
+        display: flex;
+        height: 100%;
+        width: auto; }
+        html body .header__logo-image:hover {
+          background-color: #EB5E28; }
+      html body .header__login-image {
+        display: flex;
+        height: 100%;
+        width: auto; }
+        html body .header__login-image:hover {
+          background-color: #EB5E28; }
+      html body .header__campus-image {
+        display: flex;
+        height: 100%;
+        width: auto; }
+        html body .header__campus-image:hover {
+          background-color: #EB5E28; }
+      html body .header__online-image {
+        display: flex;
+        height: 100%;
+        width: auto; }
+        html body .header__online-image:hover {
+          background-color: #EB5E28; }
+      html body .header__logo-text {
+        display: none; }
+      html body .header__nav {
+        display: none; }
+        html body .header__nav a {
+          display: none; }
+      html body .main .default-layout {
+        flex-direction: column; }
+      html body .main .left-box {
+        padding: 0;
+        width: 100%; }
+      html body .main .right-box {
+        padding: 0;
+        width: 100%; }
+      html body .main .banner-section__text {
+        justify-content: space-between;
+        padding: 32px 16px; }
+        html body .main .banner-section__text h1 {
+          font-size: 45px;
+          font-weight: 700; }
+        html body .main .banner-section__text p {
+          font-size: 24px;
+          padding: 24px; }
+        html body .main .banner-section__text a {
+          font-size: 18px;
+          font-weight: 400;
+          height: 40px; }
+      html body .main .articles-section__miniart {
+        padding: 16px; }
+      html body .main .articles-section__text h4 {
+        font-size: 24px; }
+      html body .main .articles-section__text p {
+        font-size: 16px; }
+      html body .main .courses-section {
+        padding: 0 0 32px 0; }
+        html body .main .courses-section h2 {
+          font-size: 32px;
+          font-weight: 800; }
+        html body .main .courses-section__all {
+          align-items: center;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          width: 85%; }
+        html body .main .courses-section__course {
+          width: 100%;
+          margin: 4px 0;
+          box-shadow: none; }
+          html body .main .courses-section__course img {
+            display: none; }
+        html body .main .courses-section__text h4 {
+          font-size: 24px;
+          font-weight: 500; }
+      html body .main .thesis-section h2 {
+        font-size: 32px;
+        font-weight: 800; }
+      html body .main .thesis-section__container {
+        flex-direction: column;
+        margin-bottom: 24px; }
+      html body .main .thesis-section__thesis {
+        align-items: center; }
+        html body .main .thesis-section__thesis video {
+          width: 100%; }
+        html body .main .thesis-section__thesis h4 {
+          display: none; }
+        html body .main .thesis-section__thesis p {
+          display: none; }
+      html body .main .thesis-section__miniart {
+        display: none; }
+      html body .main .thesis-section__text {
+        display: none; }
+      html body .footer {
+        text-align: center; }
+        html body .footer h6 {
+          font-size: 16px;
+          font-weight: 200;
+          color: #EB5E28; }
+        html body .footer__link {
+          display: none; } }
 
 /*# sourceMappingURL=style.css.map */

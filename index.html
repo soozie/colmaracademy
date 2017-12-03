@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Colmar Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./resources/css/reset.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="./resources/css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/fontMULI.css" type="text/css" charset="utf-8">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css" charset="utf-8">
   </head>
@@ -12,6 +14,9 @@
     <header class="header">
       <div class="header__logo-title">
         <img src="./capstone_colmar_assets/images/ic-logo.svg" alt="logo" class="header__logo-image" />
+        <img src="./capstone_colmar_assets/images/ic-login.svg" alt="login" class="header__login-image" />
+        <img src="./capstone_colmar_assets/images/ic-on-campus.svg" alt="campus" class="header__campus-image" />
+        <img src="./capstone_colmar_assets/images/ic-online.svg" alt="online" class="header__online-image" />
         <h2 class="header__logo-text"><span>COLMAR</span>ACADEMY</h2>
       </div>
       <nav class="header__nav">
@@ -48,6 +53,7 @@
         <div class="articles-section__list right-box">
           <div class="articles-section__miniart">
             <img src="./capstone_colmar_assets/images/information-orientation.jpg" alt="">
+            <img class="mobile" src="./capstone_colmar_assets/images/information-orientation-mobile.jpg" alt="">
             <div class="articles-section__text">
               <h4>Orientation date</h4>
               <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
@@ -56,6 +62,7 @@
           </div>
           <div class="articles-section__miniart">
             <img src="./capstone_colmar_assets/images/information-campus.jpg" alt="">
+            <img class="mobile" src="./capstone_colmar_assets/images/information-campus-mobile.jpg" alt="">
             <div class="articles-section__text">
               <h4>Our campus</h4>
               <p>Find which campus is close by you</p>
@@ -64,6 +71,7 @@
           </div>
           <div class="articles-section__miniart">
             <img src="./capstone_colmar_assets/images/information-guest-lecture.jpg" alt="">
+            <img class="mobile" src="./capstone_colmar_assets/images/information-guest-lecture-mobile.jpg" alt="">
             <div class="articles-section__text">
               <h4>Our guest lecture</h4>
               <p>Join a Keynote with Oliver Sack about music in medical treatment</p>
@@ -118,7 +126,7 @@
           </div>
           </div>
           <div class="courses-section__course">
-            <img src="./capstone_colmar_assets/images/course-marketing.jpg" alt="" />
+            <img src="./capstone_colmar_assets/images/course-marketing.jpg" alt="apple-watch" />
             <div class="courses-section__text">
               <h4>Marketing</h4>
               <h5>COURSES</h5>
@@ -129,38 +137,44 @@
       </div>
 <!-- Thesis Section -->
       <div class="thesis-section default-layout">
-        <div class="thesis-section__thesis left-box">
-          <video src="videofile.ogg" autoplay poster="posterimage.jpg"></video>
-          <h4>Reimagine urban</h4>
-          <p>Adipiscing elit ut aliquam purus sit. Sed blandit libero volutpat
-            sed cras ornare arcu dui vivamus. Ornare arcu odio ut sem nulla
-            pharetra diam sit amet. Facilisi morbi tempus iaculis urna id volutpat
-            lacus laoreet. Arcu ac tortor dignissim convallis aenean. Felis eget
-            velit aliquet sagittis id consectetur.</p>
-        </div>
-        <div class="thesis-section__list right-box">
-          <div class="thesis-section__list-miniart">
-            <img src="" alt="">
-            <div class="thesis-section__list-text">
-              <h4>Fisma: Design & Prototype</h4>
-              <p>Designer showcase of new prototype product</p>
-            </div>
+        <h2>Thesis exhibit</h2>
+        <div class="thesis-section__container">
+          <div class="thesis-section__thesis left-box">
+            <video src="./capstone_colmar_assets/videos/thesis.mp4" type="video/mp4" autoplay="false"> Your browser does not support the video tag.</video>
+            <h4>Reimagine urban</h4>
+            <p>"Adipiscing elit ut aliquam purus sit. Sed blandit libero volutpat
+              sed cras ornare arcu dui vivamus. Ornare arcu odio ut sem nulla
+              pharetra diam sit amet. Facilisi morbi tempus iaculis urna id volutpat
+              lacus laoreet."</p>
           </div>
-          <div class="thesis-section__list-miniart">
-            <img src="" alt="">
-            <div class="thesis-section__list-text">
-              <h4>Now and then</h4>
-              <p>Research study about New York</p>
+          <div class="thesis-section__list right-box">
+            <div class="thesis-section__miniart">
+              <img src="./capstone_colmar_assets/images/thesis-fisma.jpg" alt="project photo">
+              <div class="thesis-section__text">
+                <h4>Fisma: Design & Prototype</h4>
+                <p>Designer showcase of new prototype product</p>
+                <a href="#">Read more</a>
+              </div>
+            </div>
+            <div class="thesis-section__miniart">
+              <img src="./capstone_colmar_assets/images/thesis-now-and-then.jpg" alt="new york skyscraper">
+              <div class="thesis-section__text">
+                <h4>Now and then</h4>
+                <p>Research study about New York</p>
+                <a href="#">Read more</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-<!-- Footer Section --
+<!-- Footer Section -->
     <footer class="footer">
-      <h6> ©2016 Colmar Academy(by soozie). All rights reserved</h6>
-      <a href="#">Terms</a>
-      <a href="#">Privacy</a>
+      <h6> ©2016 Colmar Academy.(by soozie) All rights reserved</h6>
+      <div class="footer__link">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
     </footer>
   </body>
 </html>

@@ -8,7 +8,7 @@ $cl-dark: #252422;
 $cl-light: #EDE9E1;
 $cl-orange: #EB5E28;
 $cl-wall: #F4F4ED;
-$cl-wallight: rgba(244, 244, 237, 0.6);
+$cl-wallight: rgba(244, 244, 237, 0.9);
 
 * {
   box-sizing: border-box;
@@ -25,10 +25,11 @@ html {
   body {
     margin: 0;
     width: 100%;
+    background-color: $cl-wall;
 
     .header {
       align-items: center;
-      background-color: $cl-light;
+      background-color: $cl-wallight;
       box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, .2);
       display: flex;
       flex-direction: row;
@@ -52,6 +53,18 @@ html {
         width: auto;
       }
 
+      &__login-image {
+        display: none;
+      }
+
+      &__campus-image {
+        display: none;
+      }
+
+      &__online-image {
+        display: none;
+      }
+
       &__logo-text {
         color: $cl-orange;
         font-size: 24px;
@@ -66,19 +79,23 @@ html {
       &__nav {
         align-items: center;
         display: flex;
-        height: 32px;
+        height: 64px;
         justify-content: space-between;
         width: auto;
 
         a {
-          color: $cl-dark;
+          color: $cl-tortora;
           font-size: 16px;
+          font-weight: 500;
           padding: 4px 8px;
           text-decoration: none;
-          border-right: 1px solid grey;
+          transition: all 200ms ease-in-out;
 
-          &:last-child {
-            border-right: 0;
+          &:hover {
+            background-color: $cl-orange;
+            color: $cl-wall;
+            height: 64;
+            padding: 24px 8px;
           }
         }
       }
@@ -89,6 +106,8 @@ html {
       display: flex;
       flex-direction: column;
       width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
 
       .default-layout {
         display: flex;
@@ -100,17 +119,18 @@ html {
 
       .left-box {
         height: auto;
-        padding-right: 24px;
+        padding: 32px;
         width: 60%;
       }
 
       .right-box {
-        padding-left: 24px;
+        padding: 32px;
         width: 40%;
       }
 
       .banner-section {
-        background-color: $cl-cream;
+        background-color: $cl-tortora;
+        color: $cl-cream;
 
         &__image {
 
@@ -125,7 +145,7 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          padding: 100px 24px;
+          padding-right: 50px;
           text-align: center;
 
           h1 {
@@ -139,6 +159,7 @@ html {
           }
 
           a {
+            align-items: center;
             background-color: $cl-orange;
             border-radius: 2px;
             box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, .1);
@@ -146,12 +167,12 @@ html {
             display: flex;
             font-size: 18px;
             font-weight: 400;
+            height: 15%;
             justify-content: center;
-            padding: 16px 80px;
             text-align: center;
             text-decoration: none;
             transition: color, background-color 300ms ease-in-out;
-            width: auto;
+            width: 75%;
 
             &:hover {
               background-color: $cl-beige;
@@ -180,35 +201,35 @@ html {
             font-size: 32px;
             font-weight: 800;
             padding-top: 32px;
-            padding-left: 10px;
           }
 
           p {
             font-size: 16px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 1;
-            padding: 24px 60px 32px 10px;
+            padding: 24px 60px 32px 0;
+            text-align: justify;
           }
 
           h6 {
             font-size: 12px;
             font-weight: 300;
-            padding-left: 10px;
           }
         }
 
         &__list {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-around;
         }
 
         &__miniart {
-          background-color: $cl-cream;
-          border: 1px solid $cl-wall;
+          background-color: $cl-wall;
+          border: 1px solid $cl-cream;
           box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, .1);
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
           transition: all 300ms ease-in-out;
 
           &:hover {
@@ -223,13 +244,17 @@ html {
             width: 35%;
             border-radius: 2px;
           }
+
+          .mobile {
+            display: none;
+          }
         }
 
         &__text {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          padding: 32px 16px;
+          padding: 24px 16px;
           width: 65%;
 
           h4 {
@@ -238,8 +263,8 @@ html {
           }
 
           p {
-            font-size: 16px;
-            font-weight: 400;
+            font-size: 14px;
+            font-weight: 300;
             line-height: 1;
           }
 
@@ -276,9 +301,15 @@ html {
         &__course {
           background-color: $cl-wall;
           box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, .2);
+          height: auto;
           margin: 16px;
-          height: 80%;
-          width: 27%;
+          transition: all 100ms ease-in-out;
+          width: 23%;
+
+          &:hover {
+            background-color: $cl-light;
+            box-shadow: none;
+          }
 
           img {
             border-radius: 2px;
@@ -291,7 +322,7 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
-          min-height: 140px;
+          min-height: auto;
           padding: 16px;
           text-align: left;
 
@@ -317,9 +348,695 @@ html {
       }
 
       .thesis-section {
+        background-color: $cl-light;
+        flex-direction: column;
+
+        h2 {
+          margin: 0 auto;
+          color: $cl-orange;
+          font-size: 32px;
+          font-weight: 800;
+          padding: 16px 32px;
+        }
+
+        &__container {
+          display: flex;
+          flex-direction: row;
+        }
 
         &__thesis {
+          display: flex;
+          flex-direction: column;
+          padding-right: 32px;
 
+          video {
+            border-radius: 2px;
+            width: 90%;
+          }
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+            padding-top: 24px;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1;
+            max-width: 600px;
+            padding-top: 8px;
+            text-align: justify;
+            width: 100%;
+          }
+        }
+
+        &__list {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+
+        }
+
+        &__miniart {
+          background-color: $cl-wall;
+          border: 1px solid $cl-cream;
+          border-radius: 2px;
+          box-shadow: 0px 0px 16px 1px rgba(0, 0, 0, .1);
+          display: flex;
+          justify-content: space-between;
+          flex-direction: row;
+          transition: all 300ms ease-in-out;
+
+          &:first-child {
+            margin-bottom: 32px;
+          }
+
+          &:hover {
+            background-color: $cl-light;
+            border: 1px solid $cl-light;
+            box-shadow: none;
+          }
+
+          img {
+            height: 100%;
+            padding: 16px;
+            width: 35%;
+            border-radius: 2px;
+          }
+        }
+
+        &__text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 24px 16px;
+          width: 65%;
+          height: auto;
+
+          h4 {
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1;
+          }
+
+          a {
+            color: $cl-orange;
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .footer {
+      display: flex;
+      height: 64px;
+      justify-content: space-between;
+      padding: 16px 24px;
+      width: 100%;
+      background-color: $cl-tortora;
+      color: $cl-cream;
+
+      h6 {
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      &__link {
+
+        a {
+          color: $cl-orange;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+
+      .header {
+
+      }
+
+      .main {
+
+        .banner-section {
+
+          &__text {
+
+            h1 {
+              font-size: 30px;
+              font-weight: 700;
+            }
+
+            p {
+              font-size: 18px;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .articles-section {
+
+          &__miniart {
+            flex-direction: column;
+
+            img {
+              display: none;
+            }
+
+            .mobile {
+              display: flex;
+              height: 100%;
+              padding: 8px;
+              width: 100%;
+              border-radius: 2px;
+            }
+          }
+
+          &__text {
+            padding: 16px;
+            width: 100%;
+
+            p {
+              padding: 8px 0;
+            }
+          }
+        }
+
+        .courses-section {
+
+        }
+
+        .thesis-section {
+
+          &__thesis {
+
+            p {
+              max-width: 90%;
+            }
+          }
+
+          &__text {
+            padding: 16px;
+
+            p {
+              padding: 8px 0;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .header {
+
+        &__logo-text {
+          font-size: 18px;
+        }
+
+        &__nav {
+
+          a {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .main {
+
+        .default-layout {
+          padding: 0;
+        }
+
+        .banner-section {
+
+          &__text {
+
+            h1 {
+              font-size: 24px;
+              font-weight: 600;
+            }
+
+            p {
+              font-size: 16px;
+              font-weight: 400;
+            }
+
+            a {
+              font-size: 14px;
+              font-weight: 300;
+            }
+          }
+        }
+
+        .articles-section {
+          justify-content: center;
+
+          &__article {
+            display: none;
+          }
+
+          &__list {
+            width: 50%;
+          }
+
+          &__miniart {
+            width: 100%;
+          }
+
+          &__text {
+
+            h4 {
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+
+            a {
+              font-size: 10px;
+            }
+          }
+        }
+
+        .courses-section {
+
+          h2 {
+            font-size: 24px;
+            font-weight: 600;
+          }
+
+          &__text {
+            align-items: center;
+            padding: 8px;
+
+            h4 {
+              font-size: 14px;
+              font-weight: 500;
+            }
+
+            h5 {
+              display: none;
+            }
+
+            p {
+              display: none;
+            }
+          }
+        }
+
+        .thesis-section {
+
+          h2 {
+            font-size: 24px;
+            font-weight: 600;
+          }
+
+          &__thesis {
+
+            p {
+              font-size: 12px;
+              font-weight: 300;
+            }
+          }
+
+          &__miniart {
+            margin-bottom: 0;
+
+            img {
+              display: none;
+            }
+          }
+
+          &__text {
+            width: auto;
+
+            h4 {
+              font-size: 16px;
+            }
+
+            p {
+              font-size: 12px;
+            }
+
+            a {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .footer {
+        h6 {
+          font-size: 10px;
+          font-weight: 200;
+        }
+
+        &__link {
+
+          a {
+            font-size: 10px;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 590px) {
+
+      .header {
+
+        &__logo-text {
+          font-size: 16px;
+        }
+
+        &__nav {
+
+          a {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .main {
+
+        .banner-section {
+
+          &__text {
+
+            h1 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 14px;
+            }
+
+            a {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .articles-section {
+
+          &__text {
+
+            h4 {
+              font-size: 14px;
+            }
+
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+
+        .courses-section {
+
+          h2 {
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          &__text {
+
+            h4 {
+              font-size: 12px;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .thesis-section {
+
+          h2 {
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          &__thesis {
+
+            h4 {
+              font-size: 14px;
+              font-weight: 400;
+            }
+
+            p {
+              font-size: 10px;
+              font-weight: 200;
+            }
+          }
+
+          &__miniart {
+            margin-bottom: 0;
+          }
+
+          &__text {
+
+            h4 {
+              font-size: 14px;
+            }
+
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .footer {
+        h6 {
+          font-size: 8px;
+          font-weight: 200;
+        }
+
+        &__link {
+
+          a {
+            font-size: 8px;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .header {
+
+        &__logo-title {
+          justify-content: space-around;
+          width: 100%;
+        }
+
+        &__logo-image {
+          display: flex;
+          height: 100%;
+          width: auto;
+
+          &:hover {
+            background-color: $cl-orange;
+          }
+        }
+
+        &__login-image {
+          display: flex;
+          height: 100%;
+          width: auto;
+
+          &:hover {
+            background-color: $cl-orange;
+          }
+        }
+
+        &__campus-image {
+          display: flex;
+          height: 100%;
+          width: auto;
+
+          &:hover {
+            background-color: $cl-orange;
+          }
+        }
+
+        &__online-image {
+          display: flex;
+          height: 100%;
+          width: auto;
+
+          &:hover {
+            background-color: $cl-orange;
+          }
+        }
+
+        &__logo-text {
+          display: none;
+        }
+
+        &__nav {
+          display: none;
+
+          a {
+            display: none;
+          }
+        }
+      }
+
+      .main {
+
+        .default-layout {
+          flex-direction: column;
+        }
+
+        .left-box {
+          padding: 0;
+          width: 100%;
+        }
+
+        .right-box {
+          padding: 0;
+          width: 100%;
+        }
+
+        .banner-section {
+
+          &__image {
+
+          }
+
+          &__text {
+            justify-content: space-between;
+            padding: 32px 16px;
+
+            h1 {
+              font-size: 45px;
+              font-weight: 700;
+            }
+
+            p {
+              font-size: 24px;
+              padding: 24px;
+            }
+
+            a {
+              font-size: 18px;
+              font-weight: 400;
+              height: 40px;
+            }
+          }
+        }
+
+        .articles-section {
+
+          &__miniart {
+            padding: 16px;
+          }
+
+          &__text {
+
+            h4 {
+              font-size: 24px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+
+        .courses-section {
+          padding: 0 0 32px 0;
+
+          h2 {
+            font-size: 32px;
+            font-weight: 800;
+          }
+
+          &__all {
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            width: 85%;
+          }
+
+          &__course {
+            width: 100%;
+            margin: 4px 0;
+            box-shadow: none;
+
+            img {
+              display: none;
+            }
+          }
+
+          &__text {
+
+            h4 {
+              font-size: 24px;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .thesis-section {
+
+          h2 {
+            font-size: 32px;
+            font-weight: 800;
+          }
+
+          &__container {
+            flex-direction: column;
+            margin-bottom: 24px;
+          }
+
+          &__thesis {
+            align-items: center;
+
+            video {
+              width: 100%;
+            }
+
+            h4 {
+              display: none;
+            }
+
+            p {
+              display: none;
+            }
+          }
+
+          &__miniart {
+            display: none;
+          }
+
+          &__text {
+            display: none;
+          }
+        }
+      }
+
+      .footer {
+        text-align: center;
+
+        h6 {
+          font-size: 16px;
+          font-weight: 200;
+          color: $cl-orange;
+        }
+
+        &__link {
+          display: none;
         }
       }
     }
